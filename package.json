@@ -1,7 +1,7 @@
 {
-  "name": "webpack-userscript-plugin",
+  "name": "webpack-userscript-config",
   "version": "1.0.0",
-  "description": "Tool for building userscripts",
+  "description": "Opinionated webpack config for building userscripts.",
   "main": "dist/index.js",
   "scripts": {
     "install": "npm run build",
@@ -11,6 +11,7 @@
   "author": "rrowe404",
   "license": "MIT",
   "dependencies": {
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "userscript-metadata-generator": "^0.2.4",
     "webpack": "^5.96.1"

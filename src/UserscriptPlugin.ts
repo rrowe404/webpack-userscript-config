@@ -2,6 +2,7 @@ import webpack from "webpack";
 import { userscriptMetadataGenerator } from "userscript-metadata-generator";
 const glob = require("glob");
 
+/** This plugin is a wrapper around webpack's BannerPlugin that reads .meta.ts files that accompany .user.ts files, and appends the header to the output */
 class UserscriptPlugin {
     public entry: Record<string, string> = {};
     private metaData: Record<string, string> = {};
