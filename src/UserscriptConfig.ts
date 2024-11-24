@@ -1,4 +1,4 @@
-import { Configuration, EntryObject, webpack } from "webpack";
+import { Configuration } from "webpack";
 import { UserscriptPlugin } from "./UserscriptPlugin";
 
 const path = require('path');
@@ -6,7 +6,7 @@ const path = require('path');
 class UserscriptConfig {
     private plugin: UserscriptPlugin;
 
-    constructor(cwd: string) {
+    constructor(private cwd: string) {
         this.plugin = new UserscriptPlugin(cwd);
     }
 
@@ -25,7 +25,7 @@ class UserscriptConfig {
             output: {
                 clean: true,
                 filename: '[name].user.js',
-                path: path.resolve(__dirname, 'dist')
+                path: path.resolve(this.cwd, 'dist')
             },
             plugins: [
                 this.plugin
