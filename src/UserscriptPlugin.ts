@@ -6,9 +6,9 @@ class UserscriptPlugin {
     public entry: Record<string, string> = {};
     private metaData: Record<string, string> = {};
 
-  constructor() {
-    const scripts = glob.sync("./src/**/*.user.ts");
-    const metaFiles: string[] = glob.sync("./src/**/*.meta.ts");
+  constructor(cwd: string) {
+    const scripts = glob.sync(`${cwd}/src/**/*.user.ts`);
+    const metaFiles: string[] = glob.sync(`${cwd}/src/**/*.meta.ts`);
 
     this.entry = scripts.reduce(
       (acc: Record<string, string>, path: string) => {
