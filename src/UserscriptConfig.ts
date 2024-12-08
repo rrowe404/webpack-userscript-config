@@ -13,6 +13,7 @@ class UserscriptConfig {
     getConfiguration(): Configuration {
         return {
             entry: this.plugin.entry,
+            mode: 'production', // we don't minify anyway, this just suppresses warnings
             module: {
                 rules: [
                     { test: /\.ts$/, use: ['ts-loader'] }
