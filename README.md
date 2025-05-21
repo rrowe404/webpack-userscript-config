@@ -25,7 +25,7 @@ Usage: (tsconfig.json)
 Usage: (src/tsconfig.json)
 
     {
-    "extends" : "../node_modules/webpack-userscript-config/tsconfig-src.json",
+        "extends" : "../node_modules/webpack-userscript-config/tsconfig-src.json",
     }
 
 The outer configuration allows webpack to use __dirname, while the inner configuration outputs the code in a human-readable form with tree-shaken dependencies.
