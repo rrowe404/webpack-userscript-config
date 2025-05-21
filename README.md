@@ -9,12 +9,12 @@ Requires folder structure:
           - <name>.meta.ts
           - <name>.user.ts
 
-Meta files should `modules.exports` an object fitting the `Metadata` interface from `userscript-metadata-generator`
+Meta files should export an object fitting the `Metadata` interface from `userscript-metadata-generator`
 
 Usage: (webpack.config.ts)
 
     import { UserscriptConfig } from 'webpack-userscript-config';
-    module.exports = new UserscriptConfig(__dirname).getConfiguration();
+    export default new UserscriptConfig(__dirname).getConfiguration();
 
 Usage: (tsconfig.json)
 
